@@ -1,0 +1,2 @@
+# Spectra-Admin-powerless
+powerless

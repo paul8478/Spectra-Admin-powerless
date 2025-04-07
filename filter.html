@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Users by College</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Made by Somnath</h3>
+            <ul>
+                <a href="index.html" style="text-decoration: none; color: white;"><li>Dashboard</li></a>
+                <a href="Action.html" style="text-decoration: none; color: white;"><li>Action Page</li></a>
+                <a href="filter.html" style="text-decoration: none; color: white;"><li>Filtered Data</li></a>
+                <a href="paid.html" style="text-decoration: none; color: white;"><li>Paid / Non Data</li></a>
+                <a href="analytics.html" style="text-decoration: none; color: white;"><li>Analytics Data</li></a>
+            </ul>
+        </div>
+        
+        <div class="table-container">
+            
+            
+            <div id="registrationCounts" class="stats-container">
+                <p class="stats-item">MCKV Registrations: <span id="mckvCount">0</span></p>
+                <p class="stats-item">Other College Registrations: <span id="othersCount">0</span></p>
+                <p class="stats-item">Total Registrations: <span id="totalCount">0</span></p>
+
+                <div class="button-group">
+                    <button id="downloadMckvCsv" class="btn-download">Download MCKV CSV</button>
+                    <button id="downloadOthersCsv" class="btn-download">Download Others CSV</button>
+                </div>
+            </div>
+            <br>
+            <div class="controls-container">
+                <select id="collegeFilter" class="select-filter">
+                    <option value="All">All</option>
+                    <option value="MCKV">MCKV</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search by team name, email, or phone..." />
+                <button id="searchBtn" class="btn-action">Search</button>
+            </div>
+              
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Candidate</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>College</th>
+                        <th>Department</th>
+                        <th>Mode</th>
+                        <th>Paid?</th>
+                        <th>Attend</th>
+                    </tr>
+                </thead>
+                <tbody id ="filteredUserTable">
+                    <!-- Data will be populated here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>

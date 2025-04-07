@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard for managing registered teams">
+    <title>Registered Teams Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Made by Somnath</h3>
+            <ul>
+                <a href="index.html" style="text-decoration: none; color: white;"><li>Dashboard</li></a>
+                <a href="Action.html" style="text-decoration: none; color: white;"><li>Action Page</li></a>
+                <a href="filter.html" style="text-decoration: none; color: white;"><li>Filtered Data</li></a>
+                <a href="paid.html" style="text-decoration: none; color: white;"><li>Paid / Non Data</li></a>
+                <a href="analytics.html" style="text-decoration: none; color: white;"><li>Analytics Data</li></a>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h4>Total Teams</h4>
+                    <p id="totalCount">0</p>
+                </div>
+                <div class="stat-card green">
+                    <h4>MCKV Teams</h4>
+                    <p id="mckvCount">0</p>
+                </div>
+                <div class="stat-card purple">
+                    <h4>Other College</h4>
+                    <p id="othersCount">0</p>
+                </div>
+                <div class="stat-card orange">
+                    <h4>Paid</h4>
+                    <p id="totalPaid">0</p>
+                </div>
+                <div class="stat-card orange">
+                    <h4>UN-Paid</h4>
+                    <p id="totalUnpaid">0</p>
+                </div>
+            </div>
+
+            <div class="dashboard-header">
+                <h2>Registered Teams</h2>
+                <div class="controls">
+                    <button class="btn refresh-btn">Refresh</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Candidate</th>
+                            <th>Email</th>
+                            <th>Phone No</th>
+                            <th>College</th>
+                            <th>Department</th>
+                            <th>Mode</th>
+                            <th>Paid ?</th>
+                            <th>Attend</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        <!-- Data will be populated here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>

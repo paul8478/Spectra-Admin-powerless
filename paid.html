@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Users by College</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Made by Somnath</h3>
+            <ul>
+                <a href="index.html" style="text-decoration: none; color: white;"><li>Dashboard</li></a>
+                <a href="Action.html" style="text-decoration: none; color: white;"><li>Action Page</li></a>
+                <a href="filter.html" style="text-decoration: none; color: white;"><li>Filtered Data</li></a>
+                <a href="paid.html" style="text-decoration: none; color: white;"><li>Paid / Non Data</li></a>
+                <a href="analytics.html" style="text-decoration: none; color: white;"><li>Analytics Data</li></a>
+            </ul>
+
+        </div>
+        
+        
+        <div class="table-container">
+            <h2 style="text-align: center; padding: 20px;">Paid And Non Paid Data</h2>
+
+            <div class="box">
+                <select id="paidFilter" class="select-filter">
+                    <option value="">-- Select The Option --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button id="downloadFilteredCsv" class="btn-download">Download Filtered CSV</button>
+    
+                <a class="stats-item"><strong>Total Paid:</strong> <span id="totalPaid">0</span><span class="stats-item"><strong> Total Unpaid:</strong> <span id="totalUnpaid">0</span></span></a>
+                
+            </div>
+              
+            <table id="paidTable">
+                <thead>
+                    <tr>
+                        <th>T Name</th>
+                        <th>Participants</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>College</th>
+                        <th>Paid?</th>
+                    </tr>
+                </thead>
+                <tbody id="paidTableBody">
+                    <!-- Data will be populated here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>

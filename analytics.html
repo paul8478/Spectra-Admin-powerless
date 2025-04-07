@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Users by College</title>
+    <!-- Load Chart.js once -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Load Chart.js datalabels plugin once -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- Firebase import (assuming it exists in your project) -->
+    <script type="module" src="./firebase.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        
+        canvas {
+            max-width: 400px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Made by Somnath</h3>
+            <ul>
+                <a href="index.html" style="text-decoration: none; color: white;"><li>Dashboard</li></a>
+                <a href="Action.html" style="text-decoration: none; color: white;"><li>Action Page</li></a>
+                <a href="filter.html" style="text-decoration: none; color: white;"><li>Filtered Data</li></a>
+                <a href="paid.html" style="text-decoration: none; color: white;"><li>Paid / Non Data</li></a>
+                <a href="analytics.html" style="text-decoration: none; color: white;"><li>Analytics Data</li></a>
+            </ul>
+        </div>
+        
+            
+            <div class="two-div">
+
+              <div class="div1">
+                <h3>Paid vs Unpaid (Pie Chart)</h3>
+                <canvas id="paidPieChart"></canvas>
+              </div>
+              <div class="div2">
+                <h3>College Distribution (MCKV vs Others)</h3>
+                <canvas id="collegeDonutChart"></canvas>
+              </div>
+
+              
+              
+              
+            </div>
+
+            
+    </div>
+</body>
+</html>

@@ -213,12 +213,7 @@ async function searchUsers(searchTerm) {
                     <td>${user.paymentMethod || "N/A"}<br>${user.transactionId || "N/A"}</td>
                     <td>${user.paid || "N/A"}</td>
                     <td>${user.attendence || "N/A"}</td>
-                    ${fullTableBody ? `
-                    <td>
-                        <button class="paid-btn" data-id="${docId}" data-status="${user.paid || "No"}">${paidButtonText}</button><br>
-                        <button class="attendance-btn" data-id="${docId}" data-status="${user.attendence || "No"}">${attendanceButtonText}</button><br>
-                        <button class="delete-btn" data-id="${docId}" data-team="${user.teamName || "N/A"}">Delete</button>
-                    </td>` : ""}
+                    
                 </tr>
             `;
 
